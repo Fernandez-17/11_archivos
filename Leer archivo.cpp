@@ -15,7 +15,7 @@ int main (){
 	archivo.open ("Compras.txt"); // Apertura
 	if (archivo.is_open()){ // Existe ael archivo
 	archivo >> ruc; // Primer RUC
-	while (ruc != "  x "){
+	while (ruc != "x"){
         archivo >> unidades >> precio;
 		archivo.get (aux); // Salta el espacio
 		getline(archivo, producto);
@@ -25,7 +25,7 @@ int main (){
 		total = neto +igv;
 		cout<< "Compra "<< contador << ".-" << endl;
 		cout<< "  "<< producto<<":-"<< unidades
-		    << " x "<< fixed << setprecision(2)
+		    << "x"<< fixed << setprecision(2)
 			<< precio<< " = "<< neto<< "-I.G.V.: "
 			<< igv << " - Total: " << total<< endl;
 		archivo >> ruc; // Siguiente RUC
